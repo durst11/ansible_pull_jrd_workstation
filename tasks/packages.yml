@@ -1,0 +1,5 @@
+- name: Install htop
+  apt:
+    name: 
+      - htop
+      - inxi # Command line system information script for console
