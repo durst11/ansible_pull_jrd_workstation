@@ -9,4 +9,5 @@
       - wget
       - gnome-tweaks
       - caffeine
-      - python3-pip
+      - python3-pip # python package for running pip
+      - psutil

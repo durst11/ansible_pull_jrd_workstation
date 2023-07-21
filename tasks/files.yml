@@ -1,0 +1,13 @@
+- name: copy wallpaper from local directory
+  copy:
+    src: /home/jeremy/pictures/wallpapers/default/*.png
+    dest: /usr/share/backgrounds/pop
+    owner: root
+    group: root
+    
+- name: copy .bashrc file
+  copy:
+    src: files/bashrc
+    dest: /home/jeremy/.bashrc
+    owner: jeremy
+    group: jeremy

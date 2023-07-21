@@ -6,3 +6,15 @@
     method: user
     state: present
   #when: bitwarden is defined and bitwarden == true
+  
+- name: software | vscodium | install flatpak
+  tags: vscodium,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.vscodium.codium
+    method: user
+    state: present
+  #when: bitwarden is defined and bitwarden == true
+  
+  
+
