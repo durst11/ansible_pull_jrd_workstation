@@ -6,7 +6,7 @@
     method: user
     state: present
   #when: bitwarden is defined and bitwarden == true
-  
+
 - name: software | vscodium | install flatpak
   tags: vscodium,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -15,7 +15,7 @@
     method: user
     state: present
   #when: vscodium is defined and vscodium == true
-  
+
 - name: software | obsidian | install flatpak
   tags: obsidian,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -34,3 +34,11 @@
     state: present
   #when: freac is defined and freac == true
 
+- name: software | flatseal | install flatpak
+  tags: flatseal,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.freac.freac
+    method: user
+    state: present
+  #when: flatseal is defined and flatseal == true
