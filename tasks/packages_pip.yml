@@ -1,4 +1,4 @@
-- name: system setup | pip packages | install bpytop
+- name: system setup | pip packages | install
   tags: bpytop,packages,pip,python
   become_user: jeremy
   pip:
