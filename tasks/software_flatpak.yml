@@ -1,0 +1,8 @@
+- name: software | bitwarden | install flatpak
+  tags: bitwarden,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: flathub com.bitwarden.desktop
+    method: user
+    state: present
+  when: bitwarden is defined and bitwarden == true
