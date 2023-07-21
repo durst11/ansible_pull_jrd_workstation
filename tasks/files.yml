@@ -1,5 +1,6 @@
 - name: copy wallpaper from local directory
   copy:
+    remote_src: true
     src: /home/jeremy/pictures/wallpapers/default/*.png
     dest: /usr/share/backgrounds/pop
     owner: root
