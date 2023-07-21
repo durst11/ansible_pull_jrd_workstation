@@ -1,5 +1,11 @@
-- name: Install htop
+- name: system setup | apt packages | install
   apt:
     name: 
       - htop
       - inxi # Command line system information script for console
+      - curl
+      - neofetch
+      - rsync
+      - wget
+      - gnome-tweaks
+      - caffeine
