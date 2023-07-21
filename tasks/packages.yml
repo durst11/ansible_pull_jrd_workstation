@@ -9,3 +9,4 @@
       - wget
       - gnome-tweaks
       - caffeine
+      - python3-pip
