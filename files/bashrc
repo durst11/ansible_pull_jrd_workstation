@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-neofetch
+# source all extra stuff 
+source ~/.bash/bash_extra
 
 
