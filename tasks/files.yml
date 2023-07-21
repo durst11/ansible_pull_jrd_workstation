@@ -1,10 +1,12 @@
 - name: copy wallpaper from local directory
   copy:
     remote_src: true
-    src: /home/jeremy/pictures/wallpapers/default/*.png
+    src: "{{ item }}"
     dest: /usr/share/backgrounds/pop
     owner: root
     group: root
+  with_fileglob:
+    - "/home/jeremy/pictures/wallpapers/default/*.png"
     
 - name: copy .bashrc file
   copy:
