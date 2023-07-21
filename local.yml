@@ -9,5 +9,8 @@
       changed_when: False
       
   tasks:
+    - include: tasks/tweaks.yml
     - include: tasks/packages.yml
+    - include: tasks/packages_pip.yml
+    - include: tasks/software_flatpak.yml
     
