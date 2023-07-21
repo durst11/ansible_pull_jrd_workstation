@@ -14,7 +14,23 @@
     name: com.vscodium.codium
     method: user
     state: present
-  #when: bitwarden is defined and bitwarden == true
+  #when: vscodium is defined and vscodium == true
   
-  
+- name: software | obsidian | install flatpak
+  tags: obsidian,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: md.obsidian.Obsidian
+    method: user
+    state: present
+  #when: obsidian is defined and obsidian == true
+
+- name: software | freac | install flatpak
+  tags: freac,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.freac.freac
+    method: user
+    state: present
+  #when: freac is defined and freac == true
 
