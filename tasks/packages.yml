@@ -15,4 +15,4 @@
       - zfsutils-linux # needed for zfs support on pop
       - micro
       - alacritty
-      -zsh
+      - zsh
