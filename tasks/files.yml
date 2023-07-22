@@ -19,7 +19,9 @@
   file:
     path: /home/jeremy/.bash
     state: directory
-    mode: '0755'
+    owner: jeremy
+    group: jeremy
+    mode: '0700'
 
 - name: copy bash include file to .bash directory
   copy:

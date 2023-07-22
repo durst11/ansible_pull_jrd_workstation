@@ -11,6 +11,9 @@
       - caffeine
       - python3-pip # python package for running pip
       - python3-psutil
+      - python3-apt # for adding repos to apt
+      - apt-key # for adding repos to apt
+      - gpg
       - cifs-utils # needed for smb share
       - zfsutils-linux # needed for zfs support on pop
       - micro
