@@ -7,6 +7,15 @@
     state: present
   #when: bitwarden is defined and bitwarden == true
 
+- name: software | authy | install flatpak
+  tags: bitwarden,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.authy.Authy
+    method: user
+    state: present
+  #when: authy is defined and authy == true
+
 - name: software | vscodium | install flatpak
   tags: vscodium,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -38,7 +47,34 @@
   tags: flatseal,packages,flatpak,workstation-packages
   become_user: jeremy
   flatpak:
-    name: org.freac.freac
+    name: com.github.tchx84.Flatseal
     method: user
     state: present
   #when: flatseal is defined and flatseal == true
+
+- name: software | VideoDownloader | install flatpak
+  tags: VideoDownloader,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.github.unrud.VideoDownloader
+    method: user
+    state: present
+  #when: VideoDownloader is defined and VideoDownloader == true
+
+- name: software | chromium | install flatpak
+  tags: VideoDownloader,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.chromium.Chromium
+    method: user
+    state: present
+  #when: chromium is defined and chromium == true
+
+- name: software | Codecs | install flatpak
+  tags: VideoDownloader,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.chromium.Chromium.Codecs
+    method: user
+    state: present
+  #when: Codecs is defined and Codecs == true
