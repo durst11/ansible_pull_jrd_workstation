@@ -1,0 +1,4 @@
+- name: add repo | Microsoft
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=https://packages.microsoft.com/keys/microsoft.asc] https://packages.microsoft.com/repos/vscode stable main "
+    state: present
