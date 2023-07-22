@@ -14,3 +14,4 @@
     - include: tasks/packages_pip.yml
     - include: tasks/software_flatpak.yml
     - include: tasks/files.yml
+    - include: tasks/repos.yml
