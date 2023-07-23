@@ -5,7 +5,7 @@
     name: 
       - com.bitwarden.desktop
       - com.authy.Authy
-      - com.mattjakeman.ExtensionManager # gnome extension mananger
+      - com.mattjakeman.ExtensionManager
       - com.github.tchx84.Flatseal
       - com.vscodium.codium
       - md.obsidian.Obsidian
@@ -39,13 +39,13 @@
 #     state: present
   #when: vscodium is defined and vscodium == true
 
-- name: software | obsidian | install flatpak
-  tags: obsidian,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: md.obsidian.Obsidian
-    method: user
-    state: present
+# - name: software | obsidian | install flatpak
+#   tags: obsidian,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: md.obsidian.Obsidian
+#     method: user
+#     state: present
   #when: obsidian is defined and obsidian == true
 
 - name: software | freac | install flatpak
