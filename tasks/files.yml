@@ -32,7 +32,7 @@
 
 - name: Ansible check directory.
     stat:
-     path: /home/jeremy/.themes
+      path: /home/jeremy/.themes
     register: my_folder
 
   - name: "echo if directory already existed"
@@ -42,9 +42,9 @@
 
   - name: "Ansible Create directory if not exists"
     file:
-     path: /home/jeremy/.themes
-     state: directory
-     mode: 0755
-     group: jeremy
-     owner: jeremy
+      path: /home/jeremy/.themes
+      state: directory
+      mode: 0755
+      group: jeremy
+      owner: jeremy
     when: my_folder.stat.exists == false
