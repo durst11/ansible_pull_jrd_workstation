@@ -1,28 +1,42 @@
-- name: software | bitwarden | install flatpak
-  tags: bitwarden,packages,flatpak,workstation-packages
+- name: software | MyDefaults | install flatpak
+  tags: defaults,packages,flatpak,workstation-packages
   become_user: jeremy
   flatpak:
-    name: com.bitwarden.desktop
+    name: 
+      - com.bitwarden.desktop
+      - com.authy.Authy
+      - com.mattjakeman.ExtensionManager # gnome extension mananger
+      - com.github.tchx84.Flatseal
+      - com.vscodium.codium
+      - md.obsidian.Obsidian
     method: user
     state: present
+ 
+# - name: software | bitwarden | install flatpak
+#   tags: bitwarden,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: com.bitwarden.desktop
+#     method: user
+#     state: present
   #when: bitwarden is defined and bitwarden == true
 
-- name: software | authy | install flatpak
-  tags: bitwarden,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: com.authy.Authy
-    method: user
-    state: present
+# - name: software | authy | install flatpak
+#   tags: bitwarden,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: com.authy.Authy
+#     method: user
+#     state: present
   #when: authy is defined and authy == true
 
-- name: software | vscodium | install flatpak
-  tags: vscodium,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: com.vscodium.codium
-    method: user
-    state: present
+# - name: software | vscodium | install flatpak
+#   tags: vscodium,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: com.vscodium.codium
+#     method: user
+#     state: present
   #when: vscodium is defined and vscodium == true
 
 - name: software | obsidian | install flatpak
@@ -43,13 +57,13 @@
     state: present
   #when: freac is defined and freac == true
 
-- name: software | flatseal | install flatpak
-  tags: flatseal,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: com.github.tchx84.Flatseal
-    method: user
-    state: present
+# - name: software | flatseal | install flatpak
+#   tags: flatseal,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: com.github.tchx84.Flatseal
+#     method: user
+#     state: present
   #when: flatseal is defined and flatseal == true
 
 - name: software | VideoDownloader | install flatpak
@@ -62,7 +76,7 @@
   #when: VideoDownloader is defined and VideoDownloader == true
 
 - name: software | chromium | install flatpak
-  tags: VideoDownloader,packages,flatpak,workstation-packages
+  tags: chromium,packages,flatpak,workstation-packages
   become_user: jeremy
   flatpak:
     name: org.chromium.Chromium
@@ -71,10 +85,39 @@
   #when: chromium is defined and chromium == true
 
 - name: software | Codecs | install flatpak
-  tags: VideoDownloader,packages,flatpak,workstation-packages
+  tags: Codecs,packages,flatpak,workstation-packages
   become_user: jeremy
   flatpak:
     name: org.chromium.Chromium.Codecs
     method: user
     state: present
   #when: Codecs is defined and Codecs == true
+
+# Test software ------------- Below ------------
+
+- name: software | logseq | install flatpak
+  tags: logseq,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.logseq.Logseq
+    method: user
+    state: present
+  #when: logseq is defined and logseq == true
+
+- name: software | podman_desktop | install flatpak
+  tags: podman_desktop,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: io.podman_desktop.PodmanDesktop
+    method: user
+    state: present
+  #when: podman_desktop is defined and podman_desktop == true
+
+# - name: software | ExtensionManager | install flatpak
+#   tags: ExtensionManager,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name: com.mattjakeman.ExtensionManager
+#     method: user
+#     state: present
+  #when: ExtensionManager is defined and ExtensionManager == true
