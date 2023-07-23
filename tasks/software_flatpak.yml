@@ -1,51 +1,51 @@
-- name: software | MyDefaults | install flatpak
-  tags: defaults,packages,flatpak,workstation-packages
+# - name: software | MyDefaults | install flatpak
+#   tags: defaults,packages,flatpak,workstation-packages
+#   become_user: jeremy
+#   flatpak:
+#     name:
+#       - com.bitwarden.desktop
+#       - com.authy.Authy
+#       - com.mattjakeman.ExtensionManager
+#       - com.github.tchx84.Flatseal
+#       - com.vscodium.codium
+#       - md.obsidian.Obsidian
+#     method: user
+#     state: present
+ 
+- name: software | bitwarden | install flatpak
+  tags: bitwarden,packages,flatpak,workstation-packages
   become_user: jeremy
   flatpak:
-    name: 
-      - com.bitwarden.desktop
-      - com.authy.Authy
-      - com.mattjakeman.ExtensionManager
-      - com.github.tchx84.Flatseal
-      - com.vscodium.codium
-      - md.obsidian.Obsidian
+    name: com.bitwarden.desktop
     method: user
     state: present
- 
-# - name: software | bitwarden | install flatpak
-#   tags: bitwarden,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: com.bitwarden.desktop
-#     method: user
-#     state: present
   #when: bitwarden is defined and bitwarden == true
 
-# - name: software | authy | install flatpak
-#   tags: bitwarden,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: com.authy.Authy
-#     method: user
-#     state: present
+- name: software | authy | install flatpak
+  tags: bitwarden,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.authy.Authy
+    method: user
+    state: present
   #when: authy is defined and authy == true
 
-# - name: software | vscodium | install flatpak
-#   tags: vscodium,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: com.vscodium.codium
-#     method: user
-#     state: present
+- name: software | vscodium | install flatpak
+  tags: vscodium,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.vscodium.codium
+    method: user
+    state: present
   #when: vscodium is defined and vscodium == true
 
-# - name: software | obsidian | install flatpak
-#   tags: obsidian,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: md.obsidian.Obsidian
-#     method: user
-#     state: present
+- name: software | obsidian | install flatpak
+  tags: obsidian,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: md.obsidian.Obsidian
+    method: user
+    state: present
   #when: obsidian is defined and obsidian == true
 
 - name: software | freac | install flatpak
@@ -57,13 +57,13 @@
     state: present
   #when: freac is defined and freac == true
 
-# - name: software | flatseal | install flatpak
-#   tags: flatseal,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: com.github.tchx84.Flatseal
-#     method: user
-#     state: present
+- name: software | flatseal | install flatpak
+  tags: flatseal,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.github.tchx84.Flatseal
+    method: user
+    state: present
   #when: flatseal is defined and flatseal == true
 
 - name: software | VideoDownloader | install flatpak
@@ -113,11 +113,11 @@
     state: present
   #when: podman_desktop is defined and podman_desktop == true
 
-# - name: software | ExtensionManager | install flatpak
-#   tags: ExtensionManager,packages,flatpak,workstation-packages
-#   become_user: jeremy
-#   flatpak:
-#     name: com.mattjakeman.ExtensionManager
-#     method: user
-#     state: present
+- name: software | ExtensionManager | install flatpak
+  tags: ExtensionManager,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.mattjakeman.ExtensionManager
+    method: user
+    state: present
   #when: ExtensionManager is defined and ExtensionManager == true
