@@ -31,20 +31,20 @@
     group: jeremy
 
 - name: Ansible check directory.
-    stat:
-      path: /home/jeremy/.themes
-    register: my_folder
+  stat:
+    path: /home/jeremy/.themes
+  register: my_folder
 
-  - name: "echo if directory already existed"
-    debug:
-      msg: "the .themes directory is already existed"
-    when: my_folder.stat.exists
+- name: "echo if directory already existed"
+  debug:
+    msg: "the .themes directory is already existed"
+  when: my_folder.stat.exists
 
-  - name: "Ansible Create directory if not exists"
-    file:
-      path: /home/jeremy/.themes
-      state: directory
-      mode: 0755
-      group: jeremy
-      owner: jeremy
-    when: my_folder.stat.exists == false
+- name: "Ansible Create directory if not exists"
+  file:
+    path: /home/jeremy/.themes
+    state: directory
+    mode: 0755
+    group: jeremy
+    owner: jeremy
+  when: my_folder.stat.exists == false
