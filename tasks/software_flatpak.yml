@@ -12,6 +12,8 @@
 #     method: user
 #     state: present
  
+# Security
+
 - name: software | bitwarden | install flatpak
   tags: bitwarden,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -20,6 +22,15 @@
     method: user
     state: present
   #when: bitwarden is defined and bitwarden == true
+
+- name: software | protonvpn | install flatpak
+  tags: protonvpn,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.protonvpn.www
+    method: user
+    state: present
+  #when: protonvpn is defined and protonvpn == true
 
 - name: software | authy | install flatpak
   tags: bitwarden,packages,flatpak,workstation-packages
@@ -30,6 +41,8 @@
     state: present
   #when: authy is defined and authy == true
 
+# Editors
+
 - name: software | vscodium | install flatpak
   tags: vscodium,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -38,6 +51,15 @@
     method: user
     state: present
   #when: vscodium is defined and vscodium == true
+
+- name: software | helix_editor | install flatpak
+  tags: helix_editor,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.helix_editor.Helix
+    method: user
+    state: present
+  #when: helix_editor is defined and helix_editor == true
 
 - name: software | obsidian | install flatpak
   tags: obsidian,packages,flatpak,workstation-packages

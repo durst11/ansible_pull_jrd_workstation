@@ -40,11 +40,30 @@
     msg: "the .themes directory is already existed"
   when: my_folder.stat.exists
 
+- name: "Ansible Create fonts directory if not exists"
+  file:
+    path: /home/jeremy/.fonts
+    state: directory
+    mode: '0755'
+    group: jeremy
+    owner: jeremy
+  when: my_folder.stat.exists == false
+
+- name: Ansible check directory.
+  stat:
+    path: /home/jeremy/.fonts
+  register: my_folder
+
+- name: "echo if directory already existed"
+  debug:
+    msg: "the .fonts directory is already existed"
+  when: my_folder.stat.exists
+
 - name: "Ansible Create directory if not exists"
   file:
-    path: /home/jeremy/.themes
+    path: /home/jeremy/.fonts
     state: directory
-    mode: 0755
+    mode: '0755'
     group: jeremy
     owner: jeremy
   when: my_folder.stat.exists == false

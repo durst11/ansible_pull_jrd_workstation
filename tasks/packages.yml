@@ -18,3 +18,5 @@
       - micro
       - alacritty
       - zsh
+      - ranger # terminal file manager
+      - mc # midnight commander terminal file manager
