@@ -143,3 +143,21 @@
     method: user
     state: present
   #when: ExtensionManager is defined and ExtensionManager == true
+
+- name: software | XnConvert | install flatpak
+  tags: XnConvert,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.xnview.XnConvert
+    method: user
+    state: present
+  #when: XnConvert is defined and XnConvert == true
+
+- name: software | XnViewMP | install flatpak
+  tags: XnViewMP,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: com.xnview.XnViewMP
+    method: user
+    state: present
+  #when: XnViewMP is defined and XnViewMP == true

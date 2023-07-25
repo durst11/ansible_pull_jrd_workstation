@@ -20,3 +20,21 @@
       - zsh
       - ranger # terminal file manager
       - mc # midnight commander terminal file manager
+      - exfatprogs #replaces exfat-utils
+
+- name: software | remove unneeded workstation packages on debian and ubuntu hosts
+  tags: cleanup,packages,workstation-packages
+  package:
+    state: absent
+    name:
+      - libreoffice-base-core
+      - libreoffice-calc
+      - libreoffice-common
+      - libreoffice-core
+      - libreoffice-draw
+      - libreoffice-gnome
+      - libreoffice-gtk3
+      - libreoffice-impress
+      - libreoffice-math
+      - libreoffice-writer
+  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
