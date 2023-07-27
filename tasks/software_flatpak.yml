@@ -161,3 +161,21 @@
     method: user
     state: present
   #when: XnViewMP is defined and XnViewMP == true
+
+- name: software | libreoffice | install flatpak
+  tags: libreoffice,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.libreoffice.LibreOffice
+    method: user
+    state: present
+  #when: libreoffice is defined and libreoffice == true
+
+- name: software | VLC | install flatpak
+  tags: VLC,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.videolan.VLC
+    method: user
+    state: present
+  #when: VLC is defined and VLC == true
