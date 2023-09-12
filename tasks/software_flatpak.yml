@@ -43,24 +43,6 @@
 
 # Editors
 
-- name: software | vscodium | install flatpak
-  tags: vscodium,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: com.vscodium.codium
-    method: user
-    state: present
-  #when: vscodium is defined and vscodium == true
-
-- name: software | helix_editor | install flatpak
-  tags: helix_editor,packages,flatpak,workstation-packages
-  become_user: jeremy
-  flatpak:
-    name: com.helix_editor.Helix
-    method: user
-    state: present
-  #when: helix_editor is defined and helix_editor == true
-
 - name: software | obsidian | install flatpak
   tags: obsidian,packages,flatpak,workstation-packages
   become_user: jeremy
@@ -114,6 +96,15 @@
     method: user
     state: present
   #when: Codecs is defined and Codecs == true
+
+- name: software | Audacity | install flatpak
+  tags: Audacity,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.audacityteam.Audacity
+    method: user
+    state: present
+  #when: Audacity is defined and Audacity == true
 
 # Test software ------------- Below ------------
 
