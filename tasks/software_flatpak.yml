@@ -179,3 +179,12 @@
     method: user
     state: present
   #when: VLC is defined and VLC == true
+
+- name: software | qgis | install flatpak
+  tags: qgis,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: org.qgis.qgis
+    method: user
+    state: present
+  #when: qgis is defined and qgis == true
