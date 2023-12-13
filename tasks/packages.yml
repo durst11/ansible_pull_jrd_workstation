@@ -21,6 +21,12 @@
       - ranger # terminal file manager
       - mc # midnight commander terminal file manager
       - exfatprogs #replaces exfat-utils
+      - moc # Music on console
+      - qemu-kvm # Virtualization
+      - libvirt-daemon-system # Virtualization
+      - libvir-clients # Virtualization
+      - virt-manager # Virtualization
+      - syncthing
 
 - name: software | remove unneeded workstation packages on debian and ubuntu hosts
   tags: cleanup,packages,workstation-packages
