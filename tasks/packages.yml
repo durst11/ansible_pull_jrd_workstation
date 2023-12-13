@@ -24,7 +24,7 @@
       - moc # Music on console
       - qemu-kvm # Virtualization
       - libvirt-daemon-system # Virtualization
-      - libvir-clients # Virtualization
+      - libvirt-clients # Virtualization
       - virt-manager # Virtualization
       - syncthing
 
