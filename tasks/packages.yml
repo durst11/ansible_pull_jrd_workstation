@@ -20,7 +20,6 @@
       - micro
       - alacritty
       - zsh
-      - neovim
       - ranger # terminal file manager
       - mc # midnight commander terminal file manager
       - exfatprogs #replaces exfat-utils

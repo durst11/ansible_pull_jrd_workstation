@@ -115,6 +115,15 @@
     state: present
   #when: dBeaver is defined and dBeaver == true
 
+- name: software | neovim | install flatpak
+  tags: neovim,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: io.neovim.nvim
+    method: user
+    state: present
+  #when: neovim is defined and neovim == true
+
 # Test software ------------- Below ------------
 
 - name: software | logseq | install flatpak
