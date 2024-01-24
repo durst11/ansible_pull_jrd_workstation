@@ -106,6 +106,15 @@
     state: present
   #when: Audacity is defined and Audacity == true
 
+- name: software | dBeaver | install flatpak
+  tags: dBeaver,packages,flatpak,workstation-packages
+  become_user: jeremy
+  flatpak:
+    name: io.dbeaver.DBeaverCommunity
+    method: user
+    state: present
+  #when: dBeaver is defined and dBeaver == true
+
 # Test software ------------- Below ------------
 
 - name: software | logseq | install flatpak

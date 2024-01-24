@@ -12,12 +12,15 @@
       - python3-pip # python package for running pip
       - python3-psutil
       - python3-apt # for adding repos to apt
+      - python3-venv # for creating virtual environments
+      - cargo # rust package manager
       - gpg
       - cifs-utils # needed for smb share
       - zfsutils-linux # needed for zfs support on pop
       - micro
       - alacritty
       - zsh
+      - neovim
       - ranger # terminal file manager
       - mc # midnight commander terminal file manager
       - exfatprogs #replaces exfat-utils
